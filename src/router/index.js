@@ -20,46 +20,41 @@ const routes = [
     element: <Navigate to="/tesla"></Navigate>
   },
   {
+    path: '/find',
+    element: <Find></Find>
+  },
+  {
+    path: '/find/findInfo/:id',
+    disTab: true,
+    element: <FindInfo></FindInfo>
+  },
+  {
     path: '/tesla',
-    element: <Tesla></Tesla>,
-    children: [
-      {
-        path: 'model/:id',
-        element: <TeslaModel></TeslaModel>
-      },
-      {
-        path: 'order',
-        element: <TeslaOrder></TeslaOrder>
-      }
-    ]
+    element: <Tesla></Tesla>
+  },
+  {
+    path: '/tesla/model/:id',
+    element: <TeslaModel></TeslaModel>
+  },
+  {
+    path: '/teslaorder',
+    element: <TeslaOrder></TeslaOrder>
   },
   {
     path: '/shop',
-    element: <Shop></Shop>,
-    children: [
-      {
-        path: 'zone/:id',
-        element: <ShopZone></ShopZone>
-      },
-      {
-        path: 'mall',
-        element: <ShopMall></ShopMall>
-      }
-    ]
+    element: <Shop></Shop>
+  },
+  {
+    path: '/shop/zone/:id',
+    element: <ShopZone></ShopZone>
+  },
+  {
+    path: '/shop/mall',
+    element: <ShopMall></ShopMall>
   },
   {
     path: '/map',
     element: <TesMap></TesMap>
-  },
-  {
-    path: '/find',
-    element: <Find></Find>,
-    children: [
-      {
-        path: 'findInfo/:id',
-        element: <FindInfo></FindInfo>
-      }
-    ]
   }
 ]
 

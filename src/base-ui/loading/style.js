@@ -17,9 +17,10 @@ export const LoadingWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 104px;
-    height: 104px;
-    background: url(@/assets/img/home/loading-bg.png) 0 0 / 100% 100%;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 15px;
 
     img {
       width: 70px;
