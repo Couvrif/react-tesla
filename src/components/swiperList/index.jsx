@@ -3,12 +3,15 @@ import React, { memo } from 'react'
 import { SwiperListWrapper } from './style'
 import { Swiper } from 'antd-mobile'
 import CarInfo from '../carInfo'
+import { useNavigate } from 'react-router-dom'
 
 const SwiperList = memo((props) => {
   const { itemList = [] } = props
 
+  const navigate = useNavigate()
   const goToDetail = (item) => {
-    console.log('1111')
+    console.log('传参', item)
+    navigate(`/tesla/model/${item.id}`, { state: item })
   }
 
   return (

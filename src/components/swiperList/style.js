@@ -15,6 +15,7 @@ export const SwiperListWrapper = styled.div`
     position: absolute;
     font-size: 1.5rem;
     font-weight: 400;
+    color: black;
   }
   .carBuy {
     position: absolute;
@@ -22,7 +23,7 @@ export const SwiperListWrapper = styled.div`
     transform: translate(-50%);
     z-index: 1000;
     width: 20rem;
-    top: 82.5%;
+    top: 80%;
     background-color: #4e4e53;
     line-height: 2.5rem;
     border-radius: 30px;

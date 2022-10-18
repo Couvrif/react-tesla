@@ -34,10 +34,11 @@ const routes = [
   },
   {
     path: '/tesla/model/:id',
-    element: <TeslaModel></TeslaModel>
+    element: <TeslaModel></TeslaModel>,
+    disTab: true
   },
   {
-    path: '/teslaorder',
+    path: '/tesla/order',
     element: <TeslaOrder></TeslaOrder>
   },
   {

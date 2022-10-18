@@ -6,6 +6,7 @@ export const TabbarWrapper = styled.div`
   right: 0;
   bottom: 0;
   background-color: #f7f7f7;
+  z-index: 99;
 
   .tabbar_content {
     display: flex;

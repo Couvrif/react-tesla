@@ -20,17 +20,16 @@ const Tabbar = memo((props) => {
     setCurrentIndex(index)
   }
 
-  console.log('路径名称', pathname, location)
-
   useEffect(() => {
-    const index = routes.findIndex((v) => v.path === pathname)
-    setCurrentIndex(index - 1)
+    // const index = routes.findIndex((v) => v.path === pathname)
+    const index = tabs.findIndex((v) => v.key === pathname)
+    setCurrentIndex(index)
     console.log('路径名称2', index, location, routes)
-  }, [routes])
+  }, [pathname])
 
   return (
     <TabbarWrapper>
-      <div className={classNames('tabbar_content', { tabActive: routes.find((v) => v.path === pathname)?.disTab === true ? true : false })}>
+      <div className={classNames('tabbar_content', { tabActive: currentIndex === -1 })}>
         {tabs.map((item, index) => {
           return (
             <div className={classNames('tabbar', { active: currentIndex === index })} onClick={(e) => setRouteActive(item.key, index)} key={index}>
