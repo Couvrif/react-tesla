@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo, useEffect, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { ShopInfoMallWrapper } from './style'
@@ -20,7 +19,6 @@ const ShopInfoMall = memo((props) => {
   }, [])
 
   const handleScroll = (e) => {
-    console.log('多少了', window.scrollY)
     if (window.scrollY > 85) {
       setCurrentBgColor('white')
       setCurrentColor('black')
